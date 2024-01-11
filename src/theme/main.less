@@ -1,0 +1,124 @@
+@toolbarWidth: 80px;
+@sidebarWidth: 375px;
+@collapsedWidth: 20px;
+
+:root {
+  --brand-primary: rgb(47, 112, 193);
+  --brand-secondary: rgb(116, 97, 195);
+  --slider-dots-selected-bg: #000;
+  --slider-dots-bg: #ececec;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-viewport {
+  margin-bottom: 24px;
+}
+
+.slider-container {
+  display: flex;
+}
+
+.slider-slide {
+  flex: 0 0 90%;
+  min-width: 0;
+  padding: 0 15px;
+
+  .grid-teaser-item.top {
+    height: 100%;
+    background: #ececec;
+  }
+}
+
+.slider-button {
+  position: absolute;
+  z-index: 10;
+  width: 50px;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
+  cursor: pointer;
+}
+
+.slider-button-prev {
+}
+
+.slider-button-next {
+  right: 0;
+  // In case you want to remove the buttons from the mobile view
+  // @media only screen and (max-width: $computer-width) {
+  //   display: none !important;
+  // }
+}
+
+.slider-dot {
+  display: flex;
+  width: 46px;
+  height: 20px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  margin-right: 13px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-dot:after {
+  width: 100%;
+  height: 6px;
+  background: var(--slider-dots-bg);
+  content: "";
+}
+
+.slider-dot--selected:after {
+  background: var(--slider-dots-selected-bg);
+}
+
+.block.slider {
+  &:not(.inner):not([role="presentation"]) {
+    padding-bottom: 4em;
+  }
+
+  .testimonial {
+    margin: 20px 45px;
+  }
+
+  .teaser-item-title .person {
+    display: flex;
+    margin: 20px 45px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    div {
+      margin-top: auto;
+      margin-bottom: auto;
+
+      .name {
+        font-weight: 900;
+      }
+    }
+  }
+}
