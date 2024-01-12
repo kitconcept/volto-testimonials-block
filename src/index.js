@@ -6,7 +6,7 @@ import { TestimonialsBlockDataAdapter } from './components/adapter';
 import './theme/main.less';
 
 const applyConfig = (config) => {
-  config.blocks.blocksConfig.slider = {
+  config.blocks.blocksConfig.testimonials = {
     id: 'testimonials',
     title: 'Testimonials',
     group: 'text',
