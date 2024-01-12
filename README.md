@@ -11,8 +11,6 @@ The Volto Testimonials Block allows editors to add a testimonials slider to a Vo
 
 ## Installation
 
-**THIS ADD-ON IS NOT RELEASED YET, INSTALLING IT THIS WAY WON'T DO ANYTHINK BY NOW.**
-
 Create a new Volto project (you can skip this step if you already have one):
 
 ```
