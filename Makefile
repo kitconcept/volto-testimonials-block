@@ -24,7 +24,7 @@ YELLOW=`tput setaf 3`
 PLONE_VERSION=6
 VOLTO_VERSION=17.0.0
 
-ADDON_NAME='volto-testimonials-block'
+ADDON_NAME='@kitconcept/volto-testimonials-block'
 ADDON_PATH='volto-testimonials-block'
 COMPOSE_FILE=dockerfiles/docker-compose.yml
 ACCEPTANCE_COMPOSE=acceptance/docker-compose.yml

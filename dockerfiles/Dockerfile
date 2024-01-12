@@ -21,7 +21,7 @@ FROM plone/frontend-prod-config:${VOLTO_VERSION}
 
 LABEL maintainer="maintainer <maintainer@plone.org>" \
       org.label-schema.name="ghcr.io/voltotestimonials-block" \
-      org.label-schema.description="Volto project with volto-testimonials-block" \
+      org.label-schema.description="Volto project with @kitconcept/volto-testimonials-block" \
       org.label-schema.vendor="Plone CMS"
 
 COPY --from=builder /app/ /app/
