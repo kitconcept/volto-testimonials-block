@@ -1,7 +1,7 @@
-import React from "react";
-import { Segment } from "semantic-ui-react";
+import React from 'react';
+import { Segment } from 'semantic-ui-react';
 
-import Data from "./Data";
+import Data from './Data';
 
 const SliderSidebar = (props) => {
   return (

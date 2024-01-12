@@ -3,8 +3,8 @@
  * @module helpers/schema/schema
  */
 
-import merge from "deepmerge";
-import { findIndex, map } from "lodash";
+import merge from 'deepmerge';
+import { findIndex, map } from 'lodash';
 
 /**
  * Merge schemas

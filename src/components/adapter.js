@@ -1,6 +1,6 @@
-import { difference } from "@plone/volto/helpers";
-import { replaceItemOfArray } from "@plone/volto/helpers";
-import { compact } from "lodash";
+import { difference } from '@plone/volto/helpers';
+import { replaceItemOfArray } from '@plone/volto/helpers';
+import { compact } from 'lodash';
 
 export const SliderBlockDataAdapter = ({
   block,
@@ -14,7 +14,7 @@ export const SliderBlockDataAdapter = ({
     [id]: value,
   };
 
-  if (id === "slides" && data[id]) {
+  if (id === 'slides' && data[id]) {
     const diff = difference(value, data[id]);
     // If we are moving two items in the array, the changeset is > 1
     // then we do not do any sync

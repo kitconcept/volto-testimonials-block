@@ -1,40 +1,40 @@
-import { defineMessages } from "react-intl";
-import config from "@plone/volto/registry";
-import { mergeSchemas } from "../helpers";
-import { v4 as uuid } from "uuid";
+import { defineMessages } from 'react-intl';
+import config from '@plone/volto/registry';
+import { mergeSchemas } from '../helpers';
+import { v4 as uuid } from 'uuid';
 
 const messages = defineMessages({
   Slider: {
-    id: "Slider",
-    defaultMessage: "Slider",
+    id: 'Slider',
+    defaultMessage: 'Slider',
   },
   testimonial: {
-    id: "Testimonial",
-    defaultMessage: "Testimonial",
+    id: 'Testimonial',
+    defaultMessage: 'Testimonial',
   },
   image: {
-    id: "Image",
-    defaultMessage: "Image",
+    id: 'Image',
+    defaultMessage: 'Image',
   },
   name: {
-    id: "Name",
-    defaultMessage: "Name",
+    id: 'Name',
+    defaultMessage: 'Name',
   },
   additionalData: {
-    id: "Additional data",
-    defaultMessage: "Additional data",
+    id: 'Additional data',
+    defaultMessage: 'Additional data',
   },
   item: {
-    id: "Item",
-    defaultMessage: "Item",
+    id: 'Item',
+    defaultMessage: 'Item',
   },
   items: {
-    id: "Items",
-    defaultMessage: "Items",
+    id: 'Items',
+    defaultMessage: 'Items',
   },
   addItem: {
-    id: "Add item",
-    defaultMessage: "Add item",
+    id: 'Add item',
+    defaultMessage: 'Add item',
   },
 });
 
@@ -45,21 +45,21 @@ export const itemSchema = (props) =>
       addMessage: props.intl.formatMessage(messages.addItem),
       fieldsets: [
         {
-          id: "default",
-          title: "Default",
-          fields: ["testimonial", "image", "name", "additionalData"],
+          id: 'default',
+          title: 'Default',
+          fields: ['testimonial', 'image', 'name', 'additionalData'],
         },
       ],
 
       properties: {
         testimonial: {
           title: props.intl.formatMessage(messages.testimonial),
-          widget: "textarea",
+          widget: 'textarea',
         },
         image: {
           title: props.intl.formatMessage(messages.image),
-          widget: "object_browser",
-          mode: "image",
+          widget: 'object_browser',
+          mode: 'image',
           allowExternals: true,
         },
         name: {
@@ -71,32 +71,32 @@ export const itemSchema = (props) =>
       },
       required: [],
     },
-    config.blocks.blocksConfig.slider.extensions?.slideSchema || {}
+    config.blocks.blocksConfig.slider.extensions?.slideSchema || {},
   );
 
 export const SliderSchema = (props) =>
   mergeSchemas(
     {
       title: props.intl.formatMessage(messages.Slider),
-      block: "slider",
+      block: 'slider',
       fieldsets: [
         {
-          id: "default",
-          title: "Default",
-          fields: ["slides"],
+          id: 'default',
+          title: 'Default',
+          fields: ['slides'],
         },
       ],
       properties: {
         slides: {
-          widget: "object_list",
+          widget: 'object_list',
           title: props.intl.formatMessage(messages.items),
           schema: itemSchema(props),
           activeObject: props.activeObject,
           setActiveObject: props.setActiveObject,
-          default: [{ "@id": uuid() }],
+          default: [{ '@id': uuid() }],
         },
       },
       required: [],
     },
-    config.blocks.blocksConfig.slider.extensions?.blockSchema || {}
+    config.blocks.blocksConfig.slider.extensions?.blockSchema || {},
   );

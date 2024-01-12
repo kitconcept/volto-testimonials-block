@@ -1,20 +1,20 @@
-import { Icon } from "@plone/volto/components";
-import { useIntl, defineMessages } from "react-intl";
-import rightArrowSVG from "@plone/volto/icons/right-key.svg";
-import leftArrowSVG from "@plone/volto/icons/left-key.svg";
+import { Icon } from '@plone/volto/components';
+import { useIntl, defineMessages } from 'react-intl';
+import rightArrowSVG from '@plone/volto/icons/right-key.svg';
+import leftArrowSVG from '@plone/volto/icons/left-key.svg';
 
 const messages = defineMessages({
   previousButton: {
-    id: "Previous slide",
-    defaultMessage: "Previous slide",
+    id: 'Previous slide',
+    defaultMessage: 'Previous slide',
   },
   nextButton: {
-    id: "Next slide",
-    defaultMessage: "Next slide",
+    id: 'Next slide',
+    defaultMessage: 'Next slide',
   },
   goToSlide: {
-    id: "Go to slide",
-    defaultMessage: "Go to slide",
+    id: 'Go to slide',
+    defaultMessage: 'Go to slide',
   },
 });
 

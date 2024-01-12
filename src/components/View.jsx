@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import cx from "classnames";
-import Body from "./Body";
-import { withBlockExtensions } from "@plone/volto/helpers";
-import { DotButton, NextButton, PrevButton } from "./DotsAndArrows";
+import React, { useCallback, useEffect, useState } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import cx from 'classnames';
+import Body from './Body';
+import { withBlockExtensions } from '@plone/volto/helpers';
+import { DotButton, NextButton, PrevButton } from './DotsAndArrows';
 
 const SliderView = (props) => {
   const {
@@ -45,7 +45,7 @@ const SliderView = (props) => {
         setSlideIndex && setSlideIndex(index);
       }
     },
-    [emblaApi, setSlideIndex]
+    [emblaApi, setSlideIndex],
   );
 
   const onInit = useCallback((emblaApi) => {
@@ -63,9 +63,9 @@ const SliderView = (props) => {
 
     onInit(emblaApi);
     onSelect(emblaApi);
-    emblaApi.on("reInit", onInit);
-    emblaApi.on("reInit", onSelect);
-    emblaApi.on("select", onSelect);
+    emblaApi.on('reInit', onInit);
+    emblaApi.on('reInit', onSelect);
+    emblaApi.on('select', onSelect);
   }, [emblaApi, onInit, onSelect]);
 
   useEffect(() => {
@@ -84,8 +84,8 @@ const SliderView = (props) => {
   return (
     <>
       <div
-        className={cx("block slider", className)}
-        style={{ "--slider-container-width": `${sliderContainerWidth}px` }}
+        className={cx('block slider', className)}
+        style={{ '--slider-container-width': `${sliderContainerWidth}px` }}
       >
         {data.slides?.length > 0 && (
           <>
@@ -101,10 +101,10 @@ const SliderView = (props) => {
                   {data.slides &&
                     data.slides.map((item, index) => {
                       return (
-                        <div key={item["@id"]} className="slider-slide">
+                        <div key={item['@id']} className="slider-slide">
                           <Body
                             {...props}
-                            key={item["@id"]}
+                            key={item['@id']}
                             data={item}
                             isEditMode={isEditMode}
                             dataBlock={data}
@@ -127,8 +127,8 @@ const SliderView = (props) => {
                     key={index}
                     index={index}
                     onClick={() => scrollTo(index)}
-                    className={"slider-dot".concat(
-                      index === selectedIndex ? " slider-dot--selected" : ""
+                    className={'slider-dot'.concat(
+                      index === selectedIndex ? ' slider-dot--selected' : '',
                     )}
                   />
                 ))}

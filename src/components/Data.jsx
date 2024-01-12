@@ -1,14 +1,14 @@
-import React from "react";
-import { useIntl } from "react-intl";
-import { BlockDataForm } from "@plone/volto/components";
-import { SliderSchema } from "./schema";
+import React from 'react';
+import { useIntl } from 'react-intl';
+import { BlockDataForm } from '@plone/volto/components';
+import { SliderSchema } from './schema';
 
 const SliderData = (props) => {
   const { block, blocksConfig, data, onChangeBlock } = props;
   const intl = useIntl();
   const schema = SliderSchema({ ...props, intl });
 
-  const dataAdapter = blocksConfig[data["@type"]].dataAdapter;
+  const dataAdapter = blocksConfig[data['@type']].dataAdapter;
 
   return (
     <BlockDataForm

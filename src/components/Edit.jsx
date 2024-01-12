@@ -1,8 +1,8 @@
-import React from "react";
-import { withBlockExtensions } from "@plone/volto/helpers";
-import View from "./View";
-import { SidebarPortal } from "@plone/volto/components";
-import Sidebar from "./Sidebar";
+import React from 'react';
+import { withBlockExtensions } from '@plone/volto/helpers';
+import View from './View';
+import { SidebarPortal } from '@plone/volto/components';
+import Sidebar from './Sidebar';
 
 const SliderEdit = (props) => {
   const { onChangeBlock, block, selected, data } = props;
