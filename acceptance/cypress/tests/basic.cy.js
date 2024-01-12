@@ -31,8 +31,9 @@ context('Basic Acceptance Tests', () => {
 
       cy.get('[aria-multiline="false"] > p').click();
       cy.get('.text-slate-editor-inner > .ui > .icon').click();
+      cy.get('[aria-label="Unfold Text blocks"]').click();
       cy.get(
-        '[style="transition: opacity 500ms ease 0ms;"] > :nth-child(6) > .ui > .icon'
+        '[style="transition: opacity 500ms ease 0ms;"] > :nth-child(3) > .ui > .icon'
       ).click();
       // slide 0
       cy.get('#field-testimonial-0-slides-0')
