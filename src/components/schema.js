@@ -71,7 +71,7 @@ export const itemSchema = (props) =>
       },
       required: [],
     },
-    config.blocks.blocksConfig.testimonials.extensions?.slideSchema || {}
+    config.blocks.blocksConfig.testimonials.extensions?.slideSchema || {},
   );
 
 export const TestimonialsSchema = (props) =>
@@ -98,5 +98,5 @@ export const TestimonialsSchema = (props) =>
       },
       required: [],
     },
-    config.blocks.blocksConfig.testimonials.extensions?.blockSchema || {}
+    config.blocks.blocksConfig.testimonials.extensions?.blockSchema || {},
   );

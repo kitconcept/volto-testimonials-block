@@ -45,7 +45,7 @@ const TestimonialsView = (props) => {
         setSlideIndex && setSlideIndex(index);
       }
     },
-    [emblaApi, setSlideIndex]
+    [emblaApi, setSlideIndex],
   );
 
   const onInit = useCallback((emblaApi) => {
@@ -130,7 +130,7 @@ const TestimonialsView = (props) => {
                     className={'testimonial-dot'.concat(
                       index === selectedIndex
                         ? ' testimonial-dot--selected'
-                        : ''
+                        : '',
                     )}
                   />
                 ))}
