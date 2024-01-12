@@ -8,6 +8,12 @@
 
 <!-- towncrier release notes start -->
 
+## 1.0.2 (2024-01-12)
+
+### Internal
+
+- Add towncrier config @jonaspiterek [#3](https://github.com/kitconcept/volto-testimonials-block/pull/3)
+
 ## 1.0.1 (2024-01-12)
 
 ### Internal
