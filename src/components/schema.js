@@ -4,9 +4,9 @@ import { mergeSchemas } from '../helpers';
 import { v4 as uuid } from 'uuid';
 
 const messages = defineMessages({
-  Slider: {
-    id: 'Slider',
-    defaultMessage: 'Slider',
+  Testimonials: {
+    id: 'Testimonials',
+    defaultMessage: 'Testimonials',
   },
   testimonial: {
     id: 'Testimonial',
@@ -71,14 +71,14 @@ export const itemSchema = (props) =>
       },
       required: [],
     },
-    config.blocks.blocksConfig.slider.extensions?.slideSchema || {}
+    config.blocks.blocksConfig.testimonials.extensions?.slideSchema || {}
   );
 
 export const TestimonialsSchema = (props) =>
   mergeSchemas(
     {
-      title: props.intl.formatMessage(messages.Slider),
-      block: 'slider',
+      title: props.intl.formatMessage(messages.Testimonials),
+      block: 'testimonials',
       fieldsets: [
         {
           id: 'default',
@@ -98,5 +98,5 @@ export const TestimonialsSchema = (props) =>
       },
       required: [],
     },
-    config.blocks.blocksConfig.slider.extensions?.blockSchema || {}
+    config.blocks.blocksConfig.testimonials.extensions?.blockSchema || {}
   );
