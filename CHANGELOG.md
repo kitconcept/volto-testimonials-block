@@ -7,3 +7,15 @@
 -->
 
 <!-- towncrier release notes start -->
+
+## 1.0.1 (2024-01-12)
+
+### Internal
+
+- Add german translations @jonaspiterek [#1](https://github.com/kitconcept/volto-testimonials-block/pull/1)
+
+## 1.0.0 (2024-01-12)
+
+### Feature
+
+- Initial release @jonaspiterek
