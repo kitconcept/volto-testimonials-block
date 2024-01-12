@@ -4,7 +4,7 @@ import View from './View';
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from './Sidebar';
 
-const SliderEdit = (props) => {
+const TestimonialsEdit = (props) => {
   const { onChangeBlock, block, selected, data } = props;
 
   const [slideIndex, setSlideIndex] = React.useState(0);
@@ -31,4 +31,4 @@ const SliderEdit = (props) => {
   );
 };
 
-export default withBlockExtensions(SliderEdit);
+export default withBlockExtensions(TestimonialsEdit);

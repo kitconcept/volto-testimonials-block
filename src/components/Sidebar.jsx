@@ -3,7 +3,7 @@ import { Segment } from 'semantic-ui-react';
 
 import Data from './Data';
 
-const SliderSidebar = (props) => {
+const TestimonialsSidebar = (props) => {
   return (
     <Segment.Group raised>
       <Data {...props} />
@@ -11,4 +11,4 @@ const SliderSidebar = (props) => {
   );
 };
 
-export default SliderSidebar;
+export default TestimonialsSidebar;

@@ -1,11 +1,11 @@
-import DefaultSliderBody from './DefaultBody';
+import DefaultTestimonialsBody from './DefaultBody';
 
-const SliderBody = (props) => {
+const TestimonialsBody = (props) => {
   const { variation } = props;
 
-  const BodyComponent = variation?.view || DefaultSliderBody;
+  const BodyComponent = variation?.view || DefaultTestimonialsBody;
 
   return <BodyComponent {...props} />;
 };
 
-export default SliderBody;
+export default TestimonialsBody;

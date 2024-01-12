@@ -9,20 +9,20 @@
   --slider-dots-bg: #ececec;
 }
 
-.slider-wrapper {
+.testimonials-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.slider-viewport {
+.testimonials-viewport {
   margin-bottom: 24px;
 }
 
-.slider-container {
+.testimonial-container {
   display: flex;
 }
 
-.slider-slide {
+.testimonial-slide {
   min-width: 0;
   flex: 0 0 90%;
   padding: 0 15px;
@@ -33,7 +33,7 @@
   }
 }
 
-.slider-button {
+.testimonial-button {
   position: absolute;
   z-index: 10;
   width: 50px;
@@ -47,10 +47,10 @@
   cursor: pointer;
 }
 
-.slider-button-prev {
+.testimonial-button-prev {
 }
 
-.slider-button-next {
+.testimonial-button-next {
   right: 0;
   // In case you want to remove the buttons from the mobile view
   // @media only screen and (max-width: $computer-width) {
@@ -58,7 +58,7 @@
   // }
 }
 
-.slider-dot {
+.testimonial-dot {
   display: flex;
   width: 46px;
   height: 20px;
@@ -74,24 +74,24 @@
   touch-action: manipulation;
 }
 
-.slider-dots {
+.testimonial-dots {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.slider-dot:after {
+.testimonial-dot:after {
   width: 100%;
   height: 6px;
   background: var(--slider-dots-bg);
   content: '';
 }
 
-.slider-dot--selected:after {
+.testimonial-dot--selected:after {
   background: var(--slider-dots-selected-bg);
 }
 
-.block.slider {
+.block.testimonials {
   &:not(.inner):not([role='presentation']) {
     padding-bottom: 4em;
   }

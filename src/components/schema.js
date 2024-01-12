@@ -71,10 +71,10 @@ export const itemSchema = (props) =>
       },
       required: [],
     },
-    config.blocks.blocksConfig.slider.extensions?.slideSchema || {},
+    config.blocks.blocksConfig.slider.extensions?.slideSchema || {}
   );
 
-export const SliderSchema = (props) =>
+export const TestimonialsSchema = (props) =>
   mergeSchemas(
     {
       title: props.intl.formatMessage(messages.Slider),
@@ -98,5 +98,5 @@ export const SliderSchema = (props) =>
       },
       required: [],
     },
-    config.blocks.blocksConfig.slider.extensions?.blockSchema || {},
+    config.blocks.blocksConfig.slider.extensions?.blockSchema || {}
   );

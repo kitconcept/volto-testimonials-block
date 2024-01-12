@@ -39,7 +39,7 @@ export const PrevButton = (props) => {
 
   return (
     <button
-      className="slider-button slider-button-prev"
+      className="testimonial-button testimonial-button-prev"
       type="button"
       aria-label={intl.formatMessage(messages.previousButton)}
       {...restProps}
@@ -56,7 +56,7 @@ export const NextButton = (props) => {
 
   return (
     <button
-      className="slider-button slider-button-next"
+      className="testimonial-button testimonial-button-next"
       type="button"
       aria-label={intl.formatMessage(messages.nextButton)}
       {...restProps}

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 import { BlockDataForm } from '@plone/volto/components';
-import { SliderSchema } from './schema';
+import { TestimonialsSchema } from './schema';
 
-const SliderData = (props) => {
+const TestimonialsData = (props) => {
   const { block, blocksConfig, data, onChangeBlock } = props;
   const intl = useIntl();
-  const schema = SliderSchema({ ...props, intl });
+  const schema = TestimonialsSchema({ ...props, intl });
 
   const dataAdapter = blocksConfig[data['@type']].dataAdapter;
 
@@ -30,4 +30,4 @@ const SliderData = (props) => {
   );
 };
 
-export default SliderData;
+export default TestimonialsData;

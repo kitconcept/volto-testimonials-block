@@ -5,7 +5,7 @@ import Body from './Body';
 import { withBlockExtensions } from '@plone/volto/helpers';
 import { DotButton, NextButton, PrevButton } from './DotsAndArrows';
 
-const SliderView = (props) => {
+const TestimonialsView = (props) => {
   const {
     className,
     data,
@@ -45,7 +45,7 @@ const SliderView = (props) => {
         setSlideIndex && setSlideIndex(index);
       }
     },
-    [emblaApi, setSlideIndex],
+    [emblaApi, setSlideIndex]
   );
 
   const onInit = useCallback((emblaApi) => {
@@ -84,24 +84,24 @@ const SliderView = (props) => {
   return (
     <>
       <div
-        className={cx('block slider', className)}
+        className={cx('block testimonials', className)}
         style={{ '--slider-container-width': `${sliderContainerWidth}px` }}
       >
         {data.slides?.length > 0 && (
           <>
-            <div className="slider-wrapper">
+            <div className="testimonials-wrapper">
               {!data.hideArrows && data.slides?.length > 1 && (
                 <>
                   <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
                   <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
                 </>
               )}
-              <div className="slider-viewport" ref={emblaRef}>
-                <div className="slider-container">
+              <div className="testimonials-viewport" ref={emblaRef}>
+                <div className="testimonial-container">
                   {data.slides &&
                     data.slides.map((item, index) => {
                       return (
-                        <div key={item['@id']} className="slider-slide">
+                        <div key={item['@id']} className="testimonial-slide">
                           <Body
                             {...props}
                             key={item['@id']}
@@ -121,14 +121,16 @@ const SliderView = (props) => {
               </div>
             </div>
             {data.slides?.length > 1 && (
-              <div className="slider-dots">
+              <div className="testimonial-dots">
                 {scrollSnaps.map((_, index) => (
                   <DotButton
                     key={index}
                     index={index}
                     onClick={() => scrollTo(index)}
-                    className={'slider-dot'.concat(
-                      index === selectedIndex ? ' slider-dot--selected' : '',
+                    className={'testimonial-dot'.concat(
+                      index === selectedIndex
+                        ? ' testimonial-dot--selected'
+                        : ''
                     )}
                   />
                 ))}
@@ -141,4 +143,4 @@ const SliderView = (props) => {
   );
 };
 
-export default withBlockExtensions(SliderView);
+export default withBlockExtensions(TestimonialsView);

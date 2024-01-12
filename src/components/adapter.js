@@ -2,7 +2,7 @@ import { difference } from '@plone/volto/helpers';
 import { replaceItemOfArray } from '@plone/volto/helpers';
 import { compact } from 'lodash';
 
-export const SliderBlockDataAdapter = ({
+export const TestimonialsBlockDataAdapter = ({
   block,
   data,
   id,

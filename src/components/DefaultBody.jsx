@@ -4,7 +4,7 @@ import config from '@plone/volto/registry';
 
 const DefaultImage = (props) => <img {...props} alt={props.alt || ''} />;
 
-const SliderBody = ({ data, isActive }) => {
+const TestimonialsBody = ({ data, isActive }) => {
   const image = data.image?.[0];
 
   const Image = config.getComponent('Image').component || DefaultImage;
@@ -38,4 +38,4 @@ const SliderBody = ({ data, isActive }) => {
   );
 };
 
-export default SliderBody;
+export default TestimonialsBody;
