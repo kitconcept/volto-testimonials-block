@@ -22,7 +22,12 @@ const TestimonialsView = (props) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const isDraggable = data.slides?.length > 1;
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    watchDrag: isDraggable,
+  });
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
@@ -45,7 +50,7 @@ const TestimonialsView = (props) => {
         setSlideIndex && setSlideIndex(index);
       }
     },
-    [emblaApi, setSlideIndex],
+    [emblaApi, setSlideIndex]
   );
 
   const onInit = useCallback((emblaApi) => {
@@ -84,7 +89,12 @@ const TestimonialsView = (props) => {
   return (
     <>
       <div
-        className={cx('block testimonials', className)}
+        className={cx(
+          'block testimonials',
+          data.slides?.length === 1 && 'one',
+          data.slides?.length === 2 && 'two',
+          className
+        )}
         style={{ '--slider-container-width': `${sliderContainerWidth}px` }}
       >
         {data.slides?.length > 0 && (
@@ -130,7 +140,7 @@ const TestimonialsView = (props) => {
                     className={'testimonial-dot'.concat(
                       index === selectedIndex
                         ? ' testimonial-dot--selected'
-                        : '',
+                        : ''
                     )}
                   />
                 ))}

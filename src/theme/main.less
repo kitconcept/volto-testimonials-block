@@ -22,17 +22,6 @@
   display: flex;
 }
 
-.testimonial-slide {
-  min-width: 0;
-  flex: 0 0 90%;
-  padding: 0 15px;
-
-  .grid-teaser-item.top {
-    height: 100%;
-    background: #ececec;
-  }
-}
-
 .testimonial-button {
   position: absolute;
   z-index: 10;
@@ -94,6 +83,30 @@
 .block.testimonials {
   &:not(.inner):not([role='presentation']) {
     padding-bottom: 4em;
+  }
+
+  .testimonial-slide {
+    min-width: 0;
+    flex: 0 0 90%;
+    padding: 0 15px;
+
+    .grid-teaser-item.top {
+      height: 100%;
+      background: #ececec;
+    }
+  }
+
+  &.one .testimonial-slide {
+    flex: 100%;
+    padding: 0;
+  }
+
+  &.two .testimonial-container {
+    gap: 30px;
+  }
+
+  &.two .testimonial-slide {
+    padding: 0;
   }
 
   .testimonial {
