@@ -18,7 +18,7 @@ const TestimonialsBody = ({ data, isActive }) => {
     >
       <div className="teaser-item top">
         <div className="teaser-item-title fix-width-issue">
-          <p className="testimonial">"{data?.testimonial}"</p>
+          <p className="testimonial">„{data?.testimonial}“</p>
           <div className="person">
             <Image
               item={image}
