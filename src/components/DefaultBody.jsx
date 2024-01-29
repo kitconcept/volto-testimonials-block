@@ -25,7 +25,7 @@ const TestimonialsBody = (props) => {
           {!isEditMode ? (
             <TextBlockView {...props} />
           ) : (
-            <DetachedTextBlockEditor {...props} />
+            <DetachedTextBlockEditor {...props} block={data['@id']} />
           )}
           <p className="testimonial">„{data?.testimonial}“</p>
           <div className="person">
