@@ -12,6 +12,10 @@ const messages = defineMessages({
     id: 'Testimonial',
     defaultMessage: 'Testimonial',
   },
+  testimonialLanguage: {
+    id: 'Language',
+    defaultMessage: 'Language',
+  },
   image: {
     id: 'Image',
     defaultMessage: 'Image',
@@ -36,6 +40,11 @@ const messages = defineMessages({
     id: 'Add item',
     defaultMessage: 'Add item',
   },
+  description: {
+    id: 'This field is not exposed, it is only used by accessibility tools to provide a better experience.',
+    defaultMessage:
+      'This field is not exposed, it is only used by accessibility tools to provide a better experience.',
+  },
 });
 
 export const itemSchema = (props) =>
@@ -47,7 +56,13 @@ export const itemSchema = (props) =>
         {
           id: 'default',
           title: 'Default',
-          fields: ['testimonial', 'image', 'name', 'additionalData'],
+          fields: [
+            'testimonial',
+            'image',
+            'name',
+            'additionalData',
+            'testimonialLanguage',
+          ],
         },
       ],
 
@@ -67,6 +82,13 @@ export const itemSchema = (props) =>
         },
         additionalData: {
           title: props.intl.formatMessage(messages.additionalData),
+        },
+        testimonialLanguage: {
+          title: props.intl.formatMessage(messages.testimonialLanguage),
+          vocabulary: {
+            '@id': 'plone.app.vocabularies.SupportedContentLanguages',
+          },
+          description: props.intl.formatMessage(messages.description),
         },
       },
       required: [],

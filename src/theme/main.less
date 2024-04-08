@@ -9,6 +9,36 @@
   --slider-dots-bg: #ececec;
 }
 
+html {
+  &[lang='de'] {
+    .block.testimonials {
+      p.testimonial {
+        &::before {
+          content: '„';
+        }
+
+        &::after {
+          content: '“';
+        }
+      }
+    }
+  }
+
+  &[lang='en'] {
+    .block.testimonials {
+      p.testimonial {
+        &::before {
+          content: '"';
+        }
+
+        &::after {
+          content: '"';
+        }
+      }
+    }
+  }
+}
+
 .testimonials-wrapper {
   position: relative;
   overflow: hidden;
