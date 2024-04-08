@@ -4,7 +4,8 @@ import config from '@plone/volto/registry';
 
 const DefaultImage = (props) => <img {...props} alt={props.alt || ''} />;
 
-const TestimonialsBody = ({ data, isActive }) => {
+const TestimonialsBody = (props) => {
+  const { data, isActive, intl } = props;
   const image = data.image?.[0];
 
   const Image = config.getComponent('Image').component || DefaultImage;
@@ -18,7 +19,15 @@ const TestimonialsBody = ({ data, isActive }) => {
     >
       <div className="teaser-item top">
         <div className="teaser-item-title fix-width-issue">
-          <p className="testimonial">"{data?.testimonial}"</p>
+          <p
+            className="testimonial"
+            lang={
+              data.testimonialLanguage !== intl.locale &&
+              data.testimonialLanguage
+            }
+          >
+            {data?.testimonial}
+          </p>
           <div className="person">
             <Image
               item={image}
