@@ -51,6 +51,7 @@ html {
 
 .testimonial-container {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .testimonial-slide {
@@ -76,6 +77,7 @@ html {
   background-color: rgba(0, 0, 0, 0);
   color: #000;
   cursor: pointer;
+  display: none;
 }
 
 .testimonial-button-prev {
@@ -125,6 +127,10 @@ html {
 .block.testimonials {
   &:not(.inner):not([role='presentation']) {
     padding-bottom: 4em;
+  }
+
+  &:hover .testimonial-button {
+    display: block;
   }
 
   .testimonial {
