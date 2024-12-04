@@ -27,14 +27,14 @@ const TestimonialsView = (props) => {
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollPrev();
-      setSlideIndex && setSlideIndex(selectedIndex - 1);
+      setSlideIndex?.(selectedIndex - 1);
     }
   }, [emblaApi, selectedIndex, setSlideIndex]);
 
   const scrollNext = useCallback(() => {
     if (emblaApi) {
       emblaApi.scrollNext();
-      setSlideIndex && setSlideIndex(selectedIndex + 1);
+      setSlideIndex?.(selectedIndex + 1);
     }
   }, [emblaApi, selectedIndex, setSlideIndex]);
 
@@ -42,7 +42,7 @@ const TestimonialsView = (props) => {
     (index) => {
       if (emblaApi) {
         emblaApi.scrollTo(index);
-        setSlideIndex && setSlideIndex(index);
+        setSlideIndex?.(index);
       }
     },
     [emblaApi, setSlideIndex],
@@ -98,25 +98,24 @@ const TestimonialsView = (props) => {
               )}
               <div className="testimonials-viewport" ref={emblaRef}>
                 <div className="testimonial-container">
-                  {data.slides &&
-                    data.slides.map((item, index) => {
-                      return (
-                        <div key={item['@id']} className="testimonial-slide">
-                          <Body
-                            {...props}
-                            key={item['@id']}
-                            data={item}
-                            isEditMode={isEditMode}
-                            dataBlock={data}
-                            index={index}
-                            block={block}
-                            openObjectBrowser={openObjectBrowser}
-                            onChangeBlock={onChangeBlock}
-                            isActive={selectedIndex === index}
-                          />
-                        </div>
-                      );
-                    })}
+                  {data.slides?.map((item, index) => {
+                    return (
+                      <div key={item['@id']} className="testimonial-slide">
+                        <Body
+                          {...props}
+                          key={item['@id']}
+                          data={item}
+                          isEditMode={isEditMode}
+                          dataBlock={data}
+                          index={index}
+                          block={block}
+                          openObjectBrowser={openObjectBrowser}
+                          onChangeBlock={onChangeBlock}
+                          isActive={selectedIndex === index}
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
