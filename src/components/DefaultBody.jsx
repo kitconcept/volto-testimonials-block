@@ -1,11 +1,13 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 import cx from 'classnames';
 import config from '@plone/volto/registry';
 
 const DefaultImage = (props) => <img {...props} alt={props.alt || ''} />;
 
 const TestimonialsBody = (props) => {
-  const { data, isActive, intl } = props;
+  const { data, isActive } = props;
+  const intl = useIntl();
   const image = data.image?.[0];
 
   const Image = config.getComponent('Image').component || DefaultImage;
@@ -13,7 +15,6 @@ const TestimonialsBody = (props) => {
   return (
     <div
       className={cx('grid-teaser-item top', {
-        // "empty-slide": !href && isEditMode,
         'slide-visible': isActive,
       })}
     >
